@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<%= render "form", task: @task %>
 
-<%= render @task %>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('btn-salvar').remove();
 
-<div>
-  <%= link_to "Edit this task", edit_task_path(@task) %> |
-  <%= link_to "Back to tasks", tasks_path %>
+    const inputs = document.querySelectorAll('input, textarea');
 
-  <%= button_to "Destroy this task", @task, method: :delete %>
-</div>
+    inputs.forEach(el => el.disabled = true);
+    inputs.forEach(el => el.style.backgroundColor = '#f8f9fa');
+  });
+</script>

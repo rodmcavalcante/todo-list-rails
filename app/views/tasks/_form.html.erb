@@ -11,27 +11,25 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+  <div class="row">
+    <div class="col-12 col-sm-12 col-lg-6 mb-3">
+      <%= form.label :title, "Título", class: 'mb-1' %>
+      <%= form.text_field :title, class: 'form-control' %>
+    </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <div class="col-12 col-sm-12">
+      <%= form.label :description, "Descrição", class: 'mb-1' %>
+      <%= form.text_area :description, rows: 10, class: 'form-control' %>
+    </div>
   </div>
-
-  <div>
-    <%= form.label :done, style: "display: block" %>
-    <%= form.check_box :done %>
-  </div>
-
-  <div>
-    <%= form.label :due_date, style: "display: block" %>
-    <%= form.text_field :due_date %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="d-flex justify-content-end mt-3">
+    <%= link_to tasks_path, class: 'px-3 btn btn-sm border text-dark me-1' do %>
+      <i class="fa-solid fa-reply me-1"></i> Voltar
+    <% end %>
+    <%= button_tag(type: 'submit', class: 'px-3 btn btn-sm btn-success me-1', id: 'btn-salvar') do %>
+      <i class="fa-solid fa-floppy-disk me-1"></i> Salvar
+    <% end %>
   </div>
 <% end %>
+
+
