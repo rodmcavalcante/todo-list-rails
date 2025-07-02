@@ -13,3 +13,4 @@ gem "stimulus-rails", "1.3.4"
 gem "jbuilder", "2.13.0"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", "1.18.4", require: false
+gem "concurrent-ruby", "1.3.4"
